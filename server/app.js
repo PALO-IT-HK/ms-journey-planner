@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var allBikePoints = require('./routes/journey-planner');
+var swagger = require('./routes/swagger');
 
 var app = express();
 
@@ -29,6 +30,7 @@ app.use(function(req, res, next) {
 
 app.use('/', routes);
 app.use('/bike/journey', allBikePoints);
+app.use('/api/docs', swagger.router);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

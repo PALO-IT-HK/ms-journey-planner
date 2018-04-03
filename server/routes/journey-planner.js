@@ -5,6 +5,21 @@ const transformer = require('./../utils/journeyPlannerTransformer');
 const config = require('../config');
 const journeyPlannerMockResults = require('../../mock-data/bike-journey-planner.json');
 
+/**
+ * @swagger
+ * /bike/journey:
+ *   get:
+ *     description: Retrieve journey details
+ *     tags:
+ *       - journey
+ *     produces:
+ *       - application/json
+ *     responses:
+ *       200:
+ *         description: journey details
+ *         schema:
+ *           $ref: '#/definitions/results'
+ */
 router.get('/', function(req, res, next) {
   let mockData;
   let tflURI;
