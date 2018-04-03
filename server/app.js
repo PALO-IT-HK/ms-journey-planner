@@ -30,7 +30,7 @@ app.use(function(req, res, next) {
 
 app.use('/', routes);
 app.use('/bike/journey', allBikePoints);
-app.use('/api/docs', swagger.router);
+app.use('/journey/docs', swagger.router);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
