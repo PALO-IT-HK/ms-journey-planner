@@ -5,8 +5,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var routes = require('./routes/index');
-var allBikePoints = require('./routes/journey-planner');
+var healthcheck = require('./routes/healthcheck');
+var journeyPlanner = require('./routes/journey-planner');
 var swagger = require('./routes/swagger');
 
 var app = express();
@@ -28,8 +28,8 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.use('/', routes);
-app.use('/bike/journey', allBikePoints);
+app.use('/journey/healthcheck', healthcheck);
+app.use('/bike/journey', journeyPlanner);
 app.use('/journey/docs', swagger.router);
 
 // catch 404 and forward to error handler
