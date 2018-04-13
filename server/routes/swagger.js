@@ -18,7 +18,7 @@ const options = {
         description: 'Journey Planner API'
       }
     ],
-    schemes: ['https'],
+    schemes: ['https', 'http'],
     host: config.endpointBaseUrl,
     basePath: '/'
   },
