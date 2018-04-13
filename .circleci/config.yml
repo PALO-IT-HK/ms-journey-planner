@@ -47,7 +47,7 @@ jobs:
                   "cpu": 0,
                   "memoryReservation": 128,
                   "environment" : [
-                      { "name" : "NODE_ENV", "value" : "production" }
+                      { "name" : "NODE_ENV", "value" : "production" },
                       { "name" : "ENDPOINT_BASEINTERFACE", "value" : "%s" }
                   ]
                 }
