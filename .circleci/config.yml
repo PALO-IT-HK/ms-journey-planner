@@ -4,6 +4,8 @@ jobs:
     working_directory: /app
     docker:
       - image: docker:17.03.0-ce-git
+    environment:
+      - ENDPOINT_BASEINTERFACE: api.ci.palo-it-hk.com
     steps:
       - checkout
       - setup_remote_docker
