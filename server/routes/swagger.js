@@ -1,4 +1,5 @@
 const express = require('express');
+const config = require('../config');
 const router = express.Router();
 
 const options = {
@@ -18,7 +19,7 @@ const options = {
       }
     ],
     schemes: ['http'],
-    host: 'localhost:3000',
+    host: config.endpointBaseUrl,
     basePath: '/'
   },
   apis: ['./server/routes/journey-planner.js']

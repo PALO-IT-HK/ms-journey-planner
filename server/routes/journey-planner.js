@@ -9,16 +9,27 @@ const journeyPlannerMockResults = require('../../mock-data/bike-journey-planner.
  * @swagger
  * /bike/journey:
  *   get:
- *     description: Retrieve journey details
+ *     description: Get journey details
  *     tags:
  *       - journey
  *     produces:
  *       - application/json
+ *     parameters:
+ *       - name: startpt
+ *         description: Start point of the journey
+ *         default: '51.5013997859,-0.1249012859'
+ *         in: query
+ *         required: true
+ *         type: string
+ *       - name: endpt
+ *         description: End point of the journey
+ *         default: '51.5015933559,-0.1235101353'
+ *         in: query
+ *         required: true
+ *         type: string
  *     responses:
  *       200:
- *         description: journey details
- *         schema:
- *           $ref: '#/definitions/results'
+ *         description: results
  */
 router.get('/', function(req, res, next) {
   let mockData;
