@@ -3,5 +3,5 @@ module.exports = {
   endpointBaseUrl: process.env.ENDPOINT_BASEINTERFACE || 'localhost:3000',
   app_id: process.env.BIKE_APP_ID || '',
   app_key: process.env.BIKE_APP_KEY || '',
-  is_mock_data: false
+  is_mock_data: false,
 };
